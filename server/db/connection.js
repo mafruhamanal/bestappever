@@ -1,8 +1,9 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
+import "dotenv/config"; 
 
+const portNumber = process.env.PORT
 
-const uri = "mongodb+srv://mafruhamanal1:bestappever123@cluster0.jtuuybw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-console.log(`MongoDB URI: ${uri}`);
+const uri = process.env.ATLAS_URI
 
 const client = new MongoClient(uri, {
   serverApi: {
